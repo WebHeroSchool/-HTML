@@ -12,15 +12,14 @@ body{
 .header{
   display:flex;
   justify-content:space-between;
+  padding: 40px 0px;
   margin-bottom: 200px;
 }
 .logo, .menu{
   display:inline-block;
-  margin-right:63%;
 }
 .logo{
   position: relative;
-  padding:40px 0px;
   padding-left: 44px;
   font: bold 24px/32px "pt_serifbold", arial, helvetica, sans-serif;
 }
@@ -76,7 +75,7 @@ body{
   width: 100%;
 }
 .main{
-  padding: 0 63% 100px 0;
+  padding: 0 56% 0px 0;
   background: top right no-repeat url(img/mainImg.svg);
   background-size: contain;
 }
