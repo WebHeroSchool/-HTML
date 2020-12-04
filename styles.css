@@ -106,6 +106,9 @@ body{
   opacity: .5s;
 }
 @media (max-width: 768px) {
+  .logo__circle logo__circle_color_blue{
+    visibility: hidden
+  }
   .menu{
   display: none;
   }
@@ -129,7 +132,112 @@ body{
 .main__button{
   font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
   }
+
+.mobile-menu {
+  display: flex;
+  justify-content: flex-end;
 }
-.logo__circle_color_blue{
-  text: none;
+
+.mobile-menu__button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 39px;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 9999;
+}
+
+.mobile-menu__line {
+  display: block;
+  position: relative;
+  background-color: #0056ec;
+  width: 100%;
+  height: 3px;
+  transition: 0.4s;
+}
+
+.mobile-menu__line::after,
+.mobile-menu__line::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #0056ec;
+  width: 100%;
+  height: 3px;
+  transition: 0.5s;
+}
+
+.mobile-menu__line::after {
+  top: 7px;
+}
+
+.mobile-menu__line::before {
+  top: -7px;
+}
+
+.mobile-menu__container {
+  position: fixed;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: 0;
+  opacity: 1;
+  transition: 0.5s;
+  overflow: hidden;
+  background-color: #FFF;
+}
+
+.mobile-menu__list {
+  transition: 0.5s;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu__item {
+  font: 500 30px/35px "Roboto", arial, helvetica, sans-serif;
+  padding-bottom: 24px;
+}
+
+.mobile-menu__link {
+  text-decoration: none;
+  color: #000;
+  opacity: 1;
+  transition: opacity.5s;
+}
+
+.mobile-menu__link:hover {
+  opacity: 0.5;
+}
+
+.mobile-menu__checkbox {
+  display: none;
+}
+.mobile-menu__checkbox:checked ~ .mobile-menu__container {
+    height: 100%;
+}
+
+.mobile-menu__checkbox:checked ~ .mobile-menu__button .mobile-menu__line {
+    background: transparent;
+}
+.mobile-menu__checkbox:checked ~ .mobile-menu__button .mobile-menu__line::before,
+.mobile-menu__checkbox:checked ~ .mobile-menu__button .mobile-menu__line::after {
+    top: 0;
+}
+
+.mobile-menu__checkbox:checked ~ .mobile-menu__button .mobile-menu__line::after {
+    transform: rotate(-45deg);
+}
+
+.mobile-menu__checkbox:checked ~ .mobile-menu__button .mobile-menu__line::before {
+    transform: rotate(45deg);
 }
