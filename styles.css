@@ -1,3 +1,4 @@
+
 .title{
   font-family: Roboto;
 }
@@ -12,7 +13,7 @@ body{
 .header{
   display:flex;
   justify-content:space-between;
-  padding: 40px 0px;
+  padding: 0px 0px;
   margin-bottom: 200px;
 }
 
@@ -23,8 +24,11 @@ body{
 .logo {
   position: relative;
   padding: 40px 0 40px 51px;
-  font: bold 24px/31px pt_serif, arial, helvetica, sans-serif;
-}
+  }
+
+.logo__txt{
+font: bold 24px/31px pt_serif, arial, helvetica, sans-serif;
+  }
 
 .logo__circle {
   position: absolute;
@@ -110,17 +114,50 @@ body{
 .main__button:hover{
   opacity: .5s;
 }
-@media 320px{
+
+@media (max-width: 768px){
+.logo__txt{
+  display: none;
+}
+
+.menu{
+  display: none;
+  }
+
 .mobile-menu {
   display: flex;
   justify-content: flex-end;
   }
-.logo, .menu{
+.logo, .mobile-menu{
   display: inline-block;
   }
+.header{
+  margin-bottom: 28px;
+  }
+.main{
+  text-align: center;
+  padding: 74% 0 0;
+  background-size: 74%;
+  background-position: top center;
+  }
+
+.main__title{
+  font: bold 30px/39px "pt_serifbold", arial, helvetica, sans-serif;
+  margin bottom: 44px;
+  }
+
+.main__subtitle {
+  font: 500 16px/19px "roboto", arial, helvetica, sans-serif;
+  margin bottom: 25px;
 }
 
+.main__button {
+  font: 500 14px/16px "roboto", arial, helvetica, sans-serif;
+  }
+
+
 .mobile-menu__button {
+  padding: 15px 0;
   position: relative;
   display: flex;
   align-items: center;
@@ -221,4 +258,6 @@ body{
 }
 
 .mobile-menu__checkbox:checked ~ .mobile-menu__button .mobile-menu__line::before {
-    transform: rotate(45deg);}
+    transform: rotate(45deg);
+  }
+}
