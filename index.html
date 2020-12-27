@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
+
   <head>
        <meta charset="UTF-8">
        <link rel="stylesheet" href="styles.css">
        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
        <link rel="stylesheet" href="fonts.css">
        <title>Мой первый сайт</title>
-       <meta name="viewport" content="width=device-width,initial-scale=1">
+       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
        <link rel="stylesheet" href="adaptive.css">
-       <script src="file.js"></script>
+
   </head>
 
   <body>
-    <div class="page-loading">
+
+<div class="preloader" id="preloader">
   <div class="loader"></div>
-  <span class="text">Loading...</span>
-</div>
+  </div>
 
     <div class="wrapper">
     <header class="header">
@@ -27,21 +29,18 @@
         </div>
 
 
+        <nav class="menu">
+            <a class="menu__item" href="#">start</a>
+            <a class="menu__item menu__item_active" href="#">services</a>
+            <a class="menu__item" href="#">about</a>
+            <a class="menu__item" href="#">blog</a>
+            <a class="menu__item" href="#">contact us</a>
+        </nav>
 
-
-
-              <nav class="menu">
-              <a class="menu__item" href="#">start</a>
-              <a class="menu__item menu__item_active" href="#">services</a>
-              <a class="menu__item" href="#">about</a>
-              <a class="menu__item" href="#">blog</a>
-              <a class="menu__item" href="#">contact us</a>
-          </nav>
-
-          <nav class="mobile-menu">
+        <nav class="mobile-menu">
             <input type="checkbox" id="checkbox" class="mobile-menu__checkbox">
               <label for="checkbox" class="mobile-menu__button">
-                <div class="mobile-menu__line"></div></label>
+                <span class="mobile-menu__line"></span></label>
               <div class="mobile-menu__container">
                 <ul class="mobile-menu__list">
                   <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">start</a></li>
@@ -51,7 +50,7 @@
                   <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">contact us</a></li>
                 </ul>
               </div>
-          </nav>
+        </nav>
 
     </header>
 
@@ -65,12 +64,12 @@
         </h1>
 
         <p class="main__subtitle">I help tech startups design better digital products without hiring a&nbsp;full-time designer</p>
-        <a class="main__button"href="#">
+        <a class="main__button" href="#">
           Schedule free consultation
         </a>
     </section>
     </div>
-    
+  <script src="file.js"></script>
   </body>
 
 </html>

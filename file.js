@@ -1,9 +1,1 @@
-<script>
-  $(window).on('load', function () {
-    $('body').addClass('loaded_hiding');
-    window.setTimeout(function () {
-      $('body').addClass('loaded');
-      $('body').removeClass('loaded_hiding');
-    }, 500);
-  }
-</script>
+window.onload = function(){ document.querySelector(".preloader").style.display = "none"; }
