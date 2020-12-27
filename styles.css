@@ -60,7 +60,7 @@ font: bold 24px/31px pt_serif, arial, helvetica, sans-serif;
   font: 500 18px/21px Roboto, helvetica, arial sans-serif;
   color: #000;
   text-decoration: none;
-  transition: opacity .5s;
+  transition: opacity .5;
 }
 .menu__item:last-child{
   padding-right: 0;
@@ -74,7 +74,7 @@ font: bold 24px/31px pt_serif, arial, helvetica, sans-serif;
   height: 3px;
   background: #0056EC;
   opacity: 0;
-  transition: opacity.5s, width.5s;
+  transition: opacity.5, width.5s;
 }
 .menu__item:hover{
   opacity:.5;
@@ -109,13 +109,17 @@ font: bold 24px/31px pt_serif, arial, helvetica, sans-serif;
   text-decoration: none;
   border-radius: 4px;
   color: #FFF;
-  transition: opacity .5s;
+  transition: opacity .5;
 }
 .main__button:hover{
-  opacity: .5s;
+  opacity: .5;
 }
 
 @media (max-width: 768px){
+
+.wrapper{
+width: 87%;
+}
 .logo__txt{
   display: none;
 }
@@ -132,7 +136,8 @@ font: bold 24px/31px pt_serif, arial, helvetica, sans-serif;
   display: inline-block;
   }
 .header{
-  margin-bottom: 28px;
+  padding: 6px 0 0 0;
+  margin-bottom: 0;
   }
 .main{
   text-align: center;
@@ -143,15 +148,16 @@ font: bold 24px/31px pt_serif, arial, helvetica, sans-serif;
 
 .main__title{
   font: bold 30px/39px "pt_serifbold", arial, helvetica, sans-serif;
-  margin bottom: 44px;
+  margin: 20px 0 35px 0;
   }
 
 .main__subtitle {
+  margin: 0 37px 24px 44px;
   font: 500 16px/19px "roboto", arial, helvetica, sans-serif;
-  margin bottom: 25px;
 }
 
 .main__button {
+  padding: 14px 20px;
   font: 500 14px/16px "roboto", arial, helvetica, sans-serif;
   }
 
@@ -244,7 +250,47 @@ font: bold 24px/31px pt_serif, arial, helvetica, sans-serif;
 .mobile-menu__checkbox:checked ~ .mobile-menu__container {
     height: 100%;
 }
+.cssload-container {
+	width: 100%;
+	height: 49px;
+	text-align: center;
+}
 
+.cssload-speeding-wheel {
+	width: 49px;
+	height: 49px;
+	margin: 0 auto;
+	border: 3px solid rgb(0,0,0);
+	border-radius: 50%;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	animation: cssload-spin 575ms infinite linear;
+		-o-animation: cssload-spin 575ms infinite linear;
+		-ms-animation: cssload-spin 575ms infinite linear;
+		-webkit-animation: cssload-spin 575ms infinite linear;
+		-moz-animation: cssload-spin 575ms infinite linear;
+}
+
+
+@keyframes cssload-spin {
+	100%{ transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-o-keyframes cssload-spin {
+	100%{ -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-ms-keyframes cssload-spin {
+	100%{ -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-webkit-keyframes cssload-spin {
+	100%{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-moz-keyframes cssload-spin {
+	100%{ -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
 .mobile-menu__checkbox:checked ~ .mobile-menu__button .mobile-menu__line {
     background: transparent;
 }
@@ -258,26 +304,22 @@ font: bold 24px/31px pt_serif, arial, helvetica, sans-serif;
 }
 
 .mobile-menu__checkbox:checked ~ .mobile-menu__button .mobile-menu__line::before {
-    transform: rotate(45deg);
-  }
+    transform: rotate(45deg);}
+}
 
-@media screen
-    and (min-device-width: 1200px)
-    and (max-device-width: 1600px)
-    and (-webkit-min-device-pixel-ratio: 2)
-    and (min-resolution: 192dpi) {
-    }
-}
-.page-loading {
-  background-color: rgba;
-  bottom: 0;
-  left: 0;
+.preloader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
   position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 9999;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.8);
+  animation: 2s spin infinite linear;
 }
-.page-loading .loader {
+ .preloader .loader {
   background: #46c8ef;
   border-radius: 50%;
   height: 50px;
@@ -287,9 +329,9 @@ font: bold 24px/31px pt_serif, arial, helvetica, sans-serif;
   position: absolute;
   top: 50%;
   width: 50px;
-  animation: load 0.75s linear infinite;
 }
-.page-loading .loader:after {
+
+.preloader .loader:after {
   content: '';
   position: absolute;
   width: 49px;
@@ -300,19 +342,10 @@ font: bold 24px/31px pt_serif, arial, helvetica, sans-serif;
   margin: auto;
   background: white;
   border-radius: 50%;
+  animation: 2s spin infinite linear;
 }
 @keyframes load {
   to {
     transform: rotate(360deg);
   }
-}
-.page-loading .text {
-  color: #000;
-  display: block;
-  font-size: 11px;
-  left: 50%;
-  margin-left: -17px;
-  margin-top: 44px;
-  position: absolute;
-  top: 50%;
 }

@@ -1,5 +1,9 @@
 @media only screen and (min-width: 1920px) {
 
+  .wrapper{
+    width: 80%;
+  }
+
   .logo {
     padding: 42px 0 40px 51px;
   }
@@ -13,16 +17,17 @@
   }
 
   .header {
-    margin-bottom: 100px;
+    margin-bottom: 130px;
   }
 
   .mobile-menu {
     display: none;
   }
   .main{
-  padding: 100px 63% 100px 0;
+  padding: 80px 63% 100px 0;
   }
   .main__title {
+    margin: 0 0 32px 0;
     font: bold 66px/87px "pt_serifregular", arial, helvetica, sans-serif;
   }
   .main__subtitle {
@@ -30,6 +35,7 @@
     font: 22px/25px "Roboto", arial, helvetica, sans-serif;
   }
   .main__button {
+    padding: 12px 30px;
     font: 18px/32px "Roboto", arial, helvetica, sans-serif;
   }
 }
@@ -43,6 +49,9 @@
 
   .header {
     margin-bottom: 6.076vw;
+  }
+  .menu{
+    padding: 8px 3px 0 0;
   }
 
   .menu__item {
@@ -89,7 +98,7 @@
     margin-top: 8px;
   }
 
-  .logo {
+  .logo{
     padding: 33px 0 34px 44px;
   }
 
